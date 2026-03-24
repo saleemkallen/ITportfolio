@@ -101,32 +101,34 @@ export function SearchBar({ initialQuery = "", autoFocus = false, compact = fals
       <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">
         <div className="relative w-full max-w-[720px]">
           <div
-            className="flex items-center gap-2 rounded-[28px] bg-white pl-4 pr-2 py-2.5 border border-[#dfe1e5] hover:shadow-[0_2px_8px_rgba(32,33,36,0.2)] focus-within:shadow-[0_2px_8px_rgba(32,33,36,0.25)] focus-within:border-[#dfe1e5] transition-shadow"
+            className="flex flex-col gap-2 rounded-[28px] bg-white p-2 pl-4 sm:flex-row sm:items-center sm:gap-2 sm:py-2.5 sm:pr-2 border border-[#dfe1e5] hover:shadow-[0_2px_8px_rgba(32,33,36,0.2)] focus-within:shadow-[0_2px_8px_rgba(32,33,36,0.25)] focus-within:border-[#dfe1e5] transition-shadow"
             style={{ boxShadow: pillShadow }}
           >
-            <button
-              type="button"
-              className="flex-shrink-0 p-1 text-[#5f6368] hover:text-[#202124] rounded-full hover:bg-[#f1f3f4]"
-              aria-label="Add"
-            >
-              <ThinPlusIcon className="w-5 h-5" />
-            </button>
-            <input
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value)
-                setSelectedIndex(-1)
-                setShowSuggestions(true)
-              }}
-              onFocus={() => setShowSuggestions(true)}
-              onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-              onKeyDown={handleKeyDown}
-              className="flex-1 min-w-0 bg-transparent text-[16px] text-[#202124] placeholder:text-[#70757a] outline-none border-0"
-              placeholder="Search"
-            />
-            <div className="flex items-center gap-1 flex-shrink-0 pr-1">
+            <div className="flex min-w-0 flex-1 items-center gap-2">
+              <button
+                type="button"
+                className="flex-shrink-0 p-1 text-[#5f6368] hover:text-[#202124] rounded-full hover:bg-[#f1f3f4]"
+                aria-label="Add"
+              >
+                <ThinPlusIcon className="w-5 h-5" />
+              </button>
+              <input
+                ref={inputRef}
+                type="text"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setSelectedIndex(-1)
+                  setShowSuggestions(true)
+                }}
+                onFocus={() => setShowSuggestions(true)}
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                onKeyDown={handleKeyDown}
+                className="min-w-0 flex-1 bg-transparent text-[16px] text-[#202124] placeholder:text-[#70757a] outline-none border-0"
+                placeholder="Search"
+              />
+            </div>
+            <div className="flex items-center justify-end gap-1 flex-shrink-0 border-t border-[#f1f3f4] pt-2 sm:border-0 sm:pt-0 sm:pr-1">
               <button
                 type="button"
                 className="p-2 rounded-full hover:bg-[#f1f3f4] text-[#5f6368]"
@@ -143,11 +145,11 @@ export function SearchBar({ initialQuery = "", autoFocus = false, compact = fals
               </button>
               <button
                 type="button"
-                className="inline-flex items-center gap-1 rounded-full border border-[#e8eaed] bg-[#f1f3f4] px-3 py-1.5 text-[13px] text-[#5f6368] hover:bg-[#e8eaed]"
+                className="inline-flex items-center gap-1 rounded-full border border-[#e8eaed] bg-[#f1f3f4] px-2.5 py-1.5 text-[13px] text-[#5f6368] hover:bg-[#e8eaed] sm:px-3"
                 aria-label="AI Mode"
               >
                 <Sparkles className="w-[14px] h-[14px] text-[#4285F4]" strokeWidth={2} />
-                <span>AI Mode</span>
+                <span className="hidden min-[420px]:inline">AI Mode</span>
               </button>
             </div>
           </div>

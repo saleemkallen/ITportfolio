@@ -210,8 +210,8 @@ export function LandingProjects({ groups }: { groups: LandingProjectGroup[] }) {
             Work & projects
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-[14px] text-[#5f6368]">
-            Organized by focus — data & AI projects (GIS sits last in that row), professional experience, engineering
-            experiments with the 3D viewer, then web builds. Each card opens the full detail page.
+            Organized by focus — AI and application projects (GIS sits last in that row), professional experience,
+            engineering experiments with the 3D viewer, then web builds. Each card opens the full detail page.
           </p>
         </div>
 

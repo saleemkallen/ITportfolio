@@ -48,7 +48,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     <div className="min-h-screen bg-white flex flex-col">
       <SearchHeader query={query} />
 
-      <main className="flex-1 py-4 pl-[180px] pr-4">
+      <main className="flex-1 py-4 px-4 sm:px-6 lg:pl-[180px] lg:pr-8 max-w-full overflow-x-hidden">
         <Suspense fallback={<p className="text-[#545454]">Loading...</p>}>
           <SearchResults query={query} />
         </Suspense>

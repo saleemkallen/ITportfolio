@@ -1,10 +1,11 @@
-/** Public asset paths (files copied under /public/portfolio-assets) */
+/** Public asset paths (under /public; portfolio-assets/ for grouped files) */
 export const portfolioAssets = {
   /** Site screenshots for link preview cards (detail pages) */
   previewBsh: "/portfolio-assets/previews/bsh-homepage.png",
   previewJacobsCoffee: "/portfolio-assets/previews/jacobs-coffee.png",
   previewCalicutAirport: "/portfolio-assets/previews/calicut-airport.png",
-  photo: "/portfolio-assets/photo.jpg",
+  /** Profile headshot — place your file at public/photo.jpg */
+  photo: "/photo.jpg",
   acmPdf: "/portfolio-assets/ACM_Conference_Proceedings_Primary_Article_Template__1_.pdf",
   thesisDemo: "/portfolio-assets/master-thesis/demo.mp4",
   thesisReport: "/portfolio-assets/master-thesis/Master%20thesis%20report.pdf",
@@ -55,7 +56,7 @@ export const portfolioData: SearchResult[] = [
     category: "about",
     detail: {
       intro:
-        "Experience spans AI applications, data engineering, software migration, automation, analytics, and digital product development — from chatbots and retrieval-augmented generation to search optimization, process automation, decision-support systems, and web development. Muhammed focuses on LLM/RAG in enterprise settings and responsible AI; supporting data and analytics work serves those systems where needed. Some project details are intentionally limited where confidentiality applies; methods, tools, and outcomes are highlighted.",
+        "Experience spans AI applications, software integration and migration, automation, and digital product development — from chatbots and retrieval-augmented generation to search optimization, process automation, decision-support systems, and web development. Muhammed focuses on LLM/RAG in enterprise settings and responsible AI; integration, metrics, and reporting support those systems where needed. Some project details are intentionally limited where confidentiality applies; methods, tools, and outcomes are highlighted.",
       topics: [
         "Role: AI Development & Integration",
         "Profile emphasis: LLM/RAG systems and production-oriented AI",
@@ -66,14 +67,14 @@ export const portfolioData: SearchResult[] = [
   },
   {
     id: "about-2",
-    title: "Skills & Technologies — AI/ML, Data, Cloud",
+    title: "Skills & Technologies — AI/ML, Cloud & Software",
     url: "portfolio/about/skills",
     description:
-      "Python, SQL, R, MATLAB, TypeScript/JavaScript, C++, HTML/CSS, Lua · Elasticsearch, ETL, Azure OpenAI, ML/NLP · Power BI, DAX · Azure, AWS, Docker, CI/CD.",
+      "Python, SQL, R, MATLAB, TypeScript/JavaScript, C++, HTML/CSS, Lua · Elasticsearch, ingestion pipelines, Azure OpenAI, ML/NLP · Power BI, DAX · Azure, AWS, Docker, CI/CD.",
     category: "about",
     detail: {
       intro:
-        "Stack oriented toward building and shipping AI features: model integration, retrieval and vector search, data pipelines, and cloud deployment — alongside analytics and visualization where projects require it.",
+        "Stack oriented toward building and shipping AI features: model integration, retrieval and vector search, backend ingestion and serving, and cloud deployment — alongside dashboards and reporting where projects require it.",
       techStack: [
         "Python",
         "SQL",
@@ -85,7 +86,7 @@ export const portfolioData: SearchResult[] = [
         "Lua",
         "Power BI",
         "Elasticsearch",
-        "ETL pipelines",
+        "Ingestion & indexing pipelines",
         "DAX / Power Query",
         "Microsoft Azure",
         "AWS",
@@ -93,12 +94,12 @@ export const portfolioData: SearchResult[] = [
         "CI/CD",
         "Machine learning & NLP",
         "Time series & statistics",
-        "Data visualization",
+        "Dashboards & charting",
       ],
       highlights: [
         "Microsoft Azure Data Fundamentals",
         "Power BI Data Analyst Associate",
-        "Google Data Analytics Professional Certificate",
+        "Google Professional Certificate (analytics & reporting track)",
         "AWS Cloud Practitioner",
       ],
       extraNote:
@@ -226,20 +227,20 @@ export const portfolioData: SearchResult[] = [
     title: "Intern — Process Engineering · Jacobs Douwe Egberts (Nov 2022 – Apr 2023)",
     url: "portfolio/experience/jde-intern",
     description:
-      "Global Engineering: KPI analytics, TCO modeling, process data standardization, quality analytics, supply-chain dashboards, sustainability modeling, cross-site analytics integration.",
+      "Global Engineering: KPI reporting and metrics, TCO modeling, process standardization, quality metrics, supply-chain dashboards, sustainability modeling, cross-site reporting integration.",
     category: "experience",
     detail: {
       intro:
-        "Internship in Global Engineering at Jacobs Douwe Egberts (JDE Peet’s), Bremen — data management, process management, and data-driven operational support alongside production analytics.",
+        "Internship in Global Engineering at Jacobs Douwe Egberts (JDE Peet’s), Bremen — tooling for operations, process management, and metrics-driven support alongside production reporting.",
       responsibilities: [
-        "Built and maintained data pipelines and supporting analytics for operational KPIs",
+        "Built and maintained software-supported reporting flows and KPI tooling for operations",
         "Contributed to process standardization and more consistent cross-site reporting",
         "TCO and cost modeling for equipment investments and process improvements",
-        "Decision-support analytics and dashboards for engineering and procurement stakeholders",
-        "Quality analytics for packaging operations; defect reduction initiatives (~25% where cited in source)",
-        "Supplier performance analytics and procurement dashboards",
-        "Sustainability-related analytical models (e.g. pyrolysis / hydrogen initiatives context in source)",
-        "Cross-functional collaboration with engineering and IT for operational analytics and coordination",
+        "Decision-support dashboards and metrics for engineering and procurement stakeholders",
+        "Quality metrics for packaging operations; defect reduction initiatives (~25% where cited in source)",
+        "Supplier scorecards and procurement dashboards",
+        "Sustainability-related modeling (e.g. pyrolysis / hydrogen initiatives context in source)",
+        "Cross-functional collaboration with engineering and IT for operational reporting and coordination",
       ],
       links: [
         {
@@ -252,18 +253,18 @@ export const portfolioData: SearchResult[] = [
   },
   {
     id: "work-2",
-    title: "Intern — Data Collection & Systems Analysis · Calicut International Airport (Oct 2020 – Jan 2021)",
+    title: "Intern — Systems Analysis & Operational Monitoring · Calicut International Airport (Oct 2020 – Jan 2021)",
     url: "portfolio/experience/calicut-airport",
     description:
-      "Mechanical Engineering Department: operational data for fire safety & mechanical systems, documentation, performance monitoring, safety databases.",
+      "Mechanical Engineering Department: operational records for fire safety & mechanical systems, documentation, performance monitoring, safety databases.",
     category: "experience",
     detail: {
       intro:
-        "Bachelor’s internship (Oct 2020 – Jan 2021) with the Mechanical Engineering department at Calicut International Airport — exposure to data-centric operational environments and performance-focused analysis.",
+        "Bachelor’s internship (Oct 2020 – Jan 2021) with the Mechanical Engineering department at Calicut International Airport — exposure to instrumentation-heavy operational environments and performance-focused analysis.",
       responsibilities: [
-        "System performance analysis and monitoring-oriented data collection for mechanical and safety-related systems",
-        "Operational data for fire safety and mechanical systems under aviation safety constraints",
-        "Maintenance reports and data logs for critical infrastructure",
+        "System performance analysis and monitoring-oriented collection for mechanical and safety-related systems",
+        "Operational records for fire safety and mechanical systems under aviation safety constraints",
+        "Maintenance reports and logs for critical infrastructure",
         "Equipment performance metrics and maintenance scheduling insights",
         "Safety incident and equipment status databases for compliance reporting",
       ],
@@ -307,7 +308,7 @@ export const portfolioData: SearchResult[] = [
         "Full-platform Selenium-based scrape; extract, clean, structure, and prepare data for retrieval",
         "Because direct RAG on the legacy database was constrained, used Elasticsearch as the retrieval layer — structured data for ES, indexing, and tuned configs for better retrieval performance",
         "Hybrid RAG architecture; large improvement in query response accuracy (45% in legacy portfolio text)",
-        "Automated ETL via Python and Elasticsearch APIs; reduced retrieval latency ~60% via indexing/search tuning",
+        "Automated ingestion and indexing via Python and Elasticsearch APIs; reduced retrieval latency ~60% via search tuning",
         "Ingested 10,000+ documents with strong uptime (91.2% in source); web scraping pipeline structuring 1,300+ dynamic HTML pages",
         "Full-stack Flask chatbot UI for live interaction",
       ],
@@ -325,14 +326,14 @@ export const portfolioData: SearchResult[] = [
   },
   {
     id: "proj-2",
-    title: "Werkstudent — Intelligent Systems & Data Engineering (BSH)",
+    title: "Werkstudent — Intelligent Systems & Enterprise Software (BSH)",
     url: "portfolio/projects/bsh-intelligent-systems",
     description:
       "Werkstudent @ BSH, Munich: legacy-to-Bosch migration packaging (Chocolatey), Power BI tracking, Power Automate, DAX/Power Query/SQL — alongside the thesis.",
     category: "projects",
     detail: {
       intro:
-        "Working student in data and software engineering at BSH, alongside the master’s thesis. Part of the team migrating legacy software from the BSH environment to the Bosch network — creating ready-to-install packages using Chocolatey, testing them, and validating compliance with the new environment. Tracked migration and deployment progress with Power BI and related tooling.",
+        "Working student in software engineering with an intelligent-systems focus at BSH, alongside the master’s thesis. Part of the team migrating legacy software from the BSH environment to the Bosch network — creating ready-to-install packages using Chocolatey, testing them, and validating compliance with the new environment. Tracked migration and deployment progress with Power BI and related tooling.",
       techStack: [
         "Power BI",
         "Power Automate",
@@ -351,18 +352,18 @@ export const portfolioData: SearchResult[] = [
         "Migration and deployment progress tracking and reporting in Power BI",
         "Automation pipelines with Power Automate",
         "DAX, Power Query, and SQL for cleaning, manipulation, reporting, and process tracking",
-        "Redesigned internal process data platform for usability, efficiency, scalability",
-        "Integrated SQL Server, SharePoint, external APIs into unified warehouses",
-        "CI/CD for data (Jenkins, JFrog Artifactory)",
+        "Redesigned internal process platform for usability, efficiency, scalability",
+        "Integrated SQL Server, SharePoint, external APIs into unified data stores",
+        "CI/CD for pipelines and artifacts (Jenkins, JFrog Artifactory)",
         "Advanced Power BI dashboards with automated refresh",
-        "Cleaned and modeled large SQL datasets for downstream analytics/AI",
+        "Cleaned and modeled large SQL datasets for downstream AI and reporting workloads",
         "Row-level security and role-based reporting",
         "Web-based training modules for standardized configuration",
       ],
       achievements: [
         "25+ intelligence dashboards; 30+ active engineering users (source text)",
-        "Stronger data accuracy via validation, transforms, pipeline automation",
-        "Faster decisions bridging classic BI with AI-ready infrastructure",
+        "Stronger accuracy via validation, transforms, and pipeline automation",
+        "Faster decisions bridging traditional reporting with AI-ready infrastructure",
       ],
       links: [
         {
@@ -578,7 +579,7 @@ export const portfolioData: SearchResult[] = [
 /** Entries with `category: "projects"` for landing tiles and project listings. */
 export const portfolioProjects = portfolioData.filter((item) => item.category === "projects")
 
-/** Landing: GIS and spatial report last in the Data & AI row; in-progress job tool before GIS. */
+/** Landing: GIS and spatial report last in the AI & applications row; in-progress job tool before GIS. */
 export const portfolioLandingProjects: SearchResult[] = (() => {
   const byId = (id: string) => portfolioProjects.find((p) => p.id === id)
   const ordered = ["proj-1", "proj-2", "proj-3", "proj-4", "proj-6", "proj-5"].map((id) => byId(id))

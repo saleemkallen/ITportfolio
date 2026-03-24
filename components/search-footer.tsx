@@ -29,7 +29,7 @@ export function SearchFooter({ query }: SearchFooterProps) {
       </div>
 
       {/* Page Numbers */}
-      <div className="flex items-center justify-center gap-4 pb-4 text-[13px]">
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 px-2 pb-4 text-[13px]">
         <span className="text-[#d93025] font-bold">1</span>
         <span className="text-[#1a0dab] hover:underline cursor-pointer">2</span>
         <span className="text-[#1a0dab] hover:underline cursor-pointer">3</span>
@@ -39,14 +39,14 @@ export function SearchFooter({ query }: SearchFooterProps) {
       </div>
 
       {/* Related Searches */}
-      <div className="border-t border-[#ebebeb] py-4 pl-[180px]">
-        <p className="text-[13px] text-[#70757a] mb-3">Searches related to "{query}"</p>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-[500px]">
+      <div className="border-t border-[#ebebeb] py-4 px-4 sm:px-6 lg:pl-[180px]">
+        <p className="text-[13px] text-[#70757a] mb-3 break-words">Searches related to &quot;{query}&quot;</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 max-w-[500px]">
           {relatedSearches.slice(0, 6).map((term) => (
             <button
               key={term}
               onClick={() => router.push(`/search?q=${term}`)}
-              className="text-left text-[13px] text-[#1a0dab] hover:underline flex items-center gap-2"
+              className="text-left text-[13px] text-[#1a0dab] hover:underline flex items-start gap-2 min-w-0"
             >
               <svg className="w-4 h-4 text-[#9aa0a6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -56,14 +56,16 @@ export function SearchFooter({ query }: SearchFooterProps) {
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-              {term} muhammed saleem kallan
+              <span className="break-words">
+                {term} muhammed saleem kallan
+              </span>
             </button>
           ))}
         </div>
       </div>
 
       {/* Footer - full width */}
-      <div className="bg-[#f2f2f2] border-t border-[#dadce0] px-6 py-3">
+      <div className="bg-[#f2f2f2] border-t border-[#dadce0] px-4 sm:px-6 py-3">
         <div className="flex flex-wrap gap-4 text-[13px] text-[#70757a]">
           <span className="hover:underline cursor-pointer">Help</span>
           <span className="hover:underline cursor-pointer">Send feedback</span>

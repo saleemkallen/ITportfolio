@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react"
 import { GoogleLogo } from "@/components/google-logo"
 import { LandingProjects } from "@/components/landing-projects"
+import { ProfileAvatar } from "@/components/profile-avatar"
 import { SearchBar } from "@/components/search-bar"
 import {
   portfolioEngineeringExperiments,
@@ -12,9 +13,9 @@ import {
 const LANDING_GROUPS = [
   {
     id: "data-ai",
-    title: "Data, AI & analytics",
+    title: "AI & software projects",
     subtitle:
-      "Enterprise RAG, BI platforms, time series, responsible-AI research, and GIS / remote sensing — thesis-grade and production-oriented work.",
+      "Enterprise RAG, LLM integrations, time series, responsible-AI research, and GIS / remote sensing — thesis-grade, production-oriented software.",
     items: portfolioLandingProjects,
   },
   {
@@ -55,18 +56,24 @@ export default function HomePage() {
     <div className="w-full bg-white m-0 p-0">
       {/* Hero — full viewport */}
       <div className="flex min-h-screen flex-col">
-        <header className="flex justify-end items-center gap-4 px-6 py-4 text-[13px] text-[#202124]">
+        <header className="flex justify-end items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 text-[13px] text-[#202124]">
           <a
             href="https://www.linkedin.com/in/muhammed-saleem-kallan-499227127/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline whitespace-nowrap"
           >
             LinkedIn
           </a>
-          <a href="https://github.com/saleemkallen" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a
+            href="https://github.com/saleemkallen"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline whitespace-nowrap"
+          >
             GitHub
           </a>
+          <ProfileAvatar size={40} />
         </header>
 
         <main className="flex flex-1 flex-col items-center justify-center px-4 pb-10 -mt-6">
